@@ -4,3 +4,5 @@ vendor/*
 *.tgz
 .env
 
+/*IDE Files*/
+.idea
