@@ -1,3 +1,30 @@
 {
-
+  "name": "aer/aer",
+  "description": "Aer.",
+  "keywords": ["framework", "aer"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "Aer\\": "Aer/"
+    },
+    "files": [
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+    ]
+  },
+  "scripts": {
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
 }
