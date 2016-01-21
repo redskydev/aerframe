@@ -12,7 +12,7 @@ namespace Aer\Database;
 class Mysql implements DatabaseConnection
 {
 
-    public function open(){
+    public function connect(){
 
     }
 
