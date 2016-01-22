@@ -3,7 +3,9 @@
 namespace Aer\Message;
 
 
-class Message
+interface Message
 {
-
+    public function create();
+    public function retrieve();
+    public function send();
 }
