@@ -6,4 +6,5 @@ namespace Aer\Database;
 class Migration
 {
 
+
 }

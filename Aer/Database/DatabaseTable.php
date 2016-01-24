@@ -10,25 +10,29 @@ class DatabaseTable
     private $columns = array();
 
     public function create(){
-        print_r($this->columns);
+//        print_r($this->columns);
         $conn = MysqlConnection::connect();
 
         $sql = "create table if not exists " . $this->tableName;
 
         $columns_sql_arr = array();
         foreach($this->columns as $column){
-            print_r($column);
+//            print_r($column);
             array_push($columns_sql_arr, $column['name'] . " " . $column['type'] . "(" . $column['length'] . ")");
         }
         $columns_sql = implode(", ", $columns_sql_arr);
-        print $columns_sql;
-        print $sql . " (" . $columns_sql . ")";
-
+//        print $columns_sql;
+        $create = $sql . " (" . $columns_sql . ")";
+        $conn->query($create);
+        MysqlConnection::close($conn);
     }
 
     public function drop(){
-        $sql = "drop " . $this->tableName;
-        print $sql;
+        $sql = "drop table if exists " . $this->tableName;
+//        print $sql;
+        $conn = MysqlConnection::connect();
+        $conn->query($sql);
+        MysqlConnection::close($conn);
     }
 
     public function addColumn(string $type, string $name, int $length){

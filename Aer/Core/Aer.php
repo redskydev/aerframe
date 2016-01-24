@@ -9,7 +9,7 @@ class Aer
     public static function init()
     {
         $conn = MysqlConnection::connect();
-        print_r($conn->query("SELECT * FROM users"));
+//        print_r($conn->query("SELECT * FROM users"));
 
 //        print_r(MysqlConnection::connect());
 

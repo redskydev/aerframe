@@ -8,6 +8,8 @@ use App\Migrations\CreateMigrationsTable;
 
 print Aer::init();
 
-print CreateUsersTable::up();
+
+//TESTING AREA< CLEAN UP WHEN MOVED TO APPROPRIATE PLACES
+CreateUsersTable::up();
 CreateMigrationsTable::up();
-CreateMigrationsTable::down();
+//CreateMigrationsTable::down();
