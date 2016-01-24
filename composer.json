@@ -14,7 +14,8 @@
     "classmap": [
     ],
     "psr-4": {
-      "Aer\\": "Aer/"
+      "Aer\\": "Aer/",
+      "App\\": "App/"
     },
     "files": [
     ]
