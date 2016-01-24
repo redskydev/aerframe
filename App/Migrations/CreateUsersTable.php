@@ -11,8 +11,8 @@ class CreateUsersTable extends Migration
         //
         $table = new DatabaseTable();
         $table->tableName = "users";
-        $table->varchar('name', 255);
-        $table->integer('user_id', 10);
+        $table->varchar("name", 255);
+        $table->varchar("email", 255);
         $table->create();
     }
 

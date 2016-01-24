@@ -16,13 +16,14 @@ class DatabaseTable
         $sql = "create table if not exists " . $this->tableName;
 
         $columns_sql_arr = array();
+        $sql_pk = "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY";
         foreach($this->columns as $column){
 //            print_r($column);
             array_push($columns_sql_arr, $column['name'] . " " . $column['type'] . "(" . $column['length'] . ")");
         }
         $columns_sql = implode(", ", $columns_sql_arr);
 //        print $columns_sql;
-        $create = $sql . " (" . $columns_sql . ")";
+        $create = $sql . " (" . $sql_pk . ", " . $columns_sql . ")";
         $conn->query($create);
         MysqlConnection::close($conn);
     }
