@@ -2,5 +2,5 @@
 if(file_exists(__DIR__ . "/../App/Config/config.json")){
     header("Location: /index.php");
 } else {
-    echo "INSTAfgLL FILE";
+    echo "INSTALL FILE";
 }

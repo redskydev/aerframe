@@ -4,7 +4,7 @@ namespace Aer\Database;
 
 interface DatabaseConnection
 {
-    public function connect();
-    public function close();
+    public function connect($credentials);
+    public function close($connection);
 
 }
