@@ -2,22 +2,25 @@
 
 namespace Aer\Database;
 
+use Aer\Core\Aer;
+
 
 class MysqlConnection implements DatabaseConnection
 {
 
 
-    public function connect($credentials){
-// Create connection
-        $host = $credentials->host;
-        if($credentials->port != null){
-            $host .= ":" . $credentials->port;
+    public static function connect(){
+        $database_options = Aer::GetDatabaseOptions();
+
+        $host = $database_options->host;
+        if($database_options->port != null){
+            $host .= ":" . $database_options->port;
         }
         $conn = new \mysqli(
-            $credentials->host,
-            $credentials->username,
-            $credentials->password,
-            $credentials->database
+            $database_options->host,
+            $database_options->username,
+            $database_options->password,
+            $database_options->database
         );
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);

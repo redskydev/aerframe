@@ -8,11 +8,10 @@ class Aer
 {
     public static function init()
     {
-        $config_options = self::GetConfigurationOptions();
-        $database_options = $config_options->database;
-        print_r($config_options);
-        print_r($database_options);
-        print_r(MysqlConnection::connect($database_options));
+        $conn = MysqlConnection::connect();
+        print_r($conn->query("SELECT * FROM users"));
+
+//        print_r(MysqlConnection::connect());
 
         return "Serving Aer";
     }
@@ -28,6 +27,10 @@ class Aer
 
             return $config_json;
         }
+    }
+
+    public static function GetDatabaseOptions(){
+        return self::GetConfigurationOptions()->database;
     }
 
 }

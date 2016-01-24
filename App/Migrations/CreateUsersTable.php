@@ -19,5 +19,8 @@ class CreateUsersTable extends Migration
     public static function down()
     {
         //
+        $table = new DatabaseTable();
+        $table->tableName = "users";
+        $table->drop();
     }
 }
