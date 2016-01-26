@@ -12,8 +12,10 @@ class Aer
 //        print_r($conn->query("SELECT * FROM users"));
 
 //        print_r(MysqlConnection::connect());
-
-        return "Serving Aer";
+        $config_path = __DIR__ . "/../../App/Config/config.json";
+        if (!file_exists($config_path)) {
+            return "Serving Aer. Please setup the config file.";
+        }
     }
 
     public static function GetConfigurationOptions()
