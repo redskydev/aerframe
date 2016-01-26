@@ -6,7 +6,7 @@ use Aer\Core\Aer;
 use App\Migrations\CreateUsersTable;
 use App\Migrations\CreateMigrationsTable;
 use App\Modules\User\User;
-
+use Aer\Core\Http\Router;
 print Aer::init();
 
 
@@ -28,3 +28,5 @@ print "::";
 $users = User::all();
 print_r($users);
 print "::";
+print "<hr>";
+print_r(Router::get());
