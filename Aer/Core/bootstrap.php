@@ -5,7 +5,7 @@ require __DIR__.'/../../vendor/autoload.php';
 use Aer\Core\Aer;
 use App\Migrations\CreateUsersTable;
 use App\Migrations\CreateMigrationsTable;
-use App\User;
+use App\Modules\User\User;
 
 print Aer::init();
 
