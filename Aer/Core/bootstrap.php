@@ -30,3 +30,4 @@ print_r($users);
 print "::";
 print "<hr>";
 print_r(Router::get());
+print "<hr>";
