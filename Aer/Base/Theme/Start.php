@@ -2,18 +2,54 @@
 <head>
   <title>Aer Framework</title>
   <style>
-    body {
-      /*background-color: rgba(64,48,116, .7);*/
+    html {
+      background: url(/style/images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .parent {
+      position: relative;
     }
 
-    h1 {
-      color: black;
-      margin-left: auto;
-      margin-right: auto;
+    .child {
+      width: 800px;
+      height: 600px;
+      padding: 20px;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      margin: 320px 0 0 -420px;
+    }
+
+    button {
+      text-align: center;
+      width: 600px;
+      height: 100px;
+      margin-left: 90px;
+      background-color: #403074;
+      color: lightgray;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      border-radius: 50px;
+      border-style: none;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 10px 10px 10px #888888;
     }
   </style>
 <body>
-<h1>Now serving Aer!</h1>
-<img src="/style/images/Aerframe_800.png">
+<div class="parent">
+  <div class="child">
+    <img src="/style/images/Aerframe_800.png">
+    <button type="button">Create</button>
+  </div>
+</div>
+
 </body>
 </html>
