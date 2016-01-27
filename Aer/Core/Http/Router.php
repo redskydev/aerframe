@@ -25,6 +25,9 @@ class Router {
         header('Location: /404.php');
       }
 
+    } else {
+      return \Aer\Base\BaseController::index();
+
     }
   }
 
