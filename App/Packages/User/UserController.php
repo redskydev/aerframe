@@ -18,13 +18,11 @@ class UserController extends AerController {
 
   public static function testshow($id) {
     $user = User::find($id);
-    $template_path =  __DIR__ . "/Theme/Show.php";
-    return View::render($template_path, compact('user'));
+    return View::render("Show.php", compact('user'));
   }
 
   public static function something($id) {
     $user = User::find($id);
-    $template_path =  __DIR__ . "/Theme/All.php";
-    return View::render($template_path, compact('user'));
+    return View::render("All.php", compact('user'));
   }
 }

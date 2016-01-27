@@ -5,7 +5,12 @@ namespace Aer\Core\View;
 
 class View {
 
-  public static function render($template_path, $vars){
+  public static function render($template, $vars, $template_path = NULL){
+    $path_arr = explode("/", debug_backtrace()[0]['file']);
+//    $calling_contoller = array_pop($path_arr);
+
+    $template_path = implode("/", $path_arr);
+    $template_path .= "/Theme/$template";
     ob_start();
     require $template_path;
     $view = ob_get_contents();
