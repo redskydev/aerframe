@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Test;
+namespace App\Packages\Test;
 
 use Aer\Core\Controller\AerController;
 //use App\Modules\Test\Test;

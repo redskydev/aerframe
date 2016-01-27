@@ -5,20 +5,21 @@ namespace Aer\Core\Http;
 
 class Router {
 
-  private static $appModuleNamespace = "\\App\\Modules";
+  private static $appPackageNamespace = "\\App\\Packages";
 
   public static function get() {
 
     //PARAMETERS WE EXPECT
     //@todo add error handling
     if (!empty($_GET)) {
-      $module = "\\" . ucfirst($_GET['module']);
+      $package = "\\" . ucfirst($_GET['package']);
       $method = $_GET['method'];
       $id = $_GET['id'];
 
-      $controller = $module . "Controller";
-      if (method_exists(static::$appModuleNamespace . $module . $controller, $method)) {
-        return call_user_func(static::$appModuleNamespace . $module . $controller . "::" . $method, $id);
+
+      $controller = $package . "Controller";
+      if (method_exists(static::$appPackageNamespace . $package . $controller, $method)) {
+        return call_user_func(static::$appPackageNamespace . $package . $controller . "::" . $method, $id);
       }
       else {
         header('Location: /404.php');

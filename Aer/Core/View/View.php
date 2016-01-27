@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: scjac_000
- * Date: 1/26/2016
- * Time: 1:18 PM
- */
 
 namespace Aer\Core\View;
 
@@ -17,6 +11,10 @@ class View {
     $view = ob_get_contents();
     ob_end_clean();
     return $view;
+  }
+
+  public static function json($vars){
+    return print_r(json_encode($vars), true);
   }
 
 }

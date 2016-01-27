@@ -1,19 +1,19 @@
 <?php
-namespace App\Modules\User;
+namespace App\Packages\User;
 
 use Aer\Core\Controller\AerController;
 use Aer\Core\View\View;
 
-//use App\Modules\User\User;
+//use App\Packages\User\User;
 
 class UserController extends AerController {
 
   public static function show($id) {
-    return User::find($id);
+    return View::json(User::find($id));
   }
 
   public static function all(){
-    return User::all();
+    return View::json(User::all());
   }
 
   public static function testshow($id) {
