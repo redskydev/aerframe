@@ -11,6 +11,8 @@
     }
     .parent {
       position: relative;
+      height: 100%;
+      width: 100%;
     }
 
     .child {
@@ -19,10 +21,10 @@
       padding: 20px;
 
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: 50%;
 
-      margin: 320px 0 0 -420px;
+      margin: 0px 0 0 -420px;
     }
 
     button {
