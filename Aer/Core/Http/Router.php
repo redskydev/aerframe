@@ -21,9 +21,10 @@ class Router {
       if (method_exists(static::$appPackageNamespace . $package . $controller, $method)) {
         return call_user_func(static::$appPackageNamespace . $package . $controller . "::" . $method, $id);
       }
-      else {
-        header('Location: /404.php');
-      }
+//      else {
+//        header('Location: /404.php');
+//      }
+      print_r($_GET);
 
     } else {
       return \Aer\Base\BaseController::index();
