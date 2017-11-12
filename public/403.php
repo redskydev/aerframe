@@ -1,3 +1,3 @@
 <?php
 
-print "403. Forbidden.";
+echo "403. Forbidden.";

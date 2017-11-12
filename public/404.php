@@ -1,3 +1,3 @@
 <?php
 
-print "404. NOT FOUND";
+echo "404. NOT FOUND";
